@@ -1,3 +1,4 @@
+
 /* Copyright (c) 2009 Matthias Kaeppler
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -173,7 +174,7 @@ public class WebImageView extends ViewSwitcher {
     private void addImageView(Context context) {
         imageView = new ImageView(context);
         imageView.setScaleType(scaleType);
-        LayoutParams lp = new LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT);
+        LayoutParams lp = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
         lp.gravity = Gravity.CENTER;
         addView(imageView, 1, lp);
     }
@@ -217,9 +218,6 @@ public class WebImageView extends ViewSwitcher {
      */
     public void setScaleType(ScaleType scaleType) {
         this.scaleType = scaleType;
-        if (imageView != null) {
-            imageView.setScaleType(scaleType);
-        }
     }
 
     @Override
