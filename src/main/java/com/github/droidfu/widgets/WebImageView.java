@@ -208,6 +208,16 @@ public class WebImageView extends ViewSwitcher {
         imageView.setImageDrawable(getContext().getResources().getDrawable(imageResourceId));
         setDisplayedChild(1);
     }
+    
+    /**
+     * Use this method to set the scale type of the ImageView within.
+     * 
+     * @param scaleType
+     *          the scale type to use
+     */
+    public void setScaleType(ScaleType scaleType) {
+        this.scaleType = scaleType;
+    }
 
     @Override
     public void reset() {
